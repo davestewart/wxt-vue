@@ -1,13 +1,20 @@
-import { defineConfig } from 'wxt';
-import vue from '@vitejs/plugin-vue';
+import { defineConfig } from 'wxt'
+import vue from '@vitejs/plugin-vue'
 
 // See https://wxt.dev/api/config.html
 export default defineConfig({
   // folders
-  outDir: './dist',
-  srcDir: './src',
+  outDir: 'dist',
+  srcDir: 'src',
+  entrypointsDir: 'pages',
 
   // build
+  runner: {
+    disabled: true,
+    binaries: {
+      chrome: '/Applications/Google Chrome.app'
+    },
+  },
   imports: {
     addons: {
       vueTemplate: true,
@@ -16,4 +23,4 @@ export default defineConfig({
   vite: () => ({
     plugins: [vue()],
   }),
-});
+})
