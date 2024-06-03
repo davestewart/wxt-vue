@@ -8,5 +8,5 @@ export default defineContentScript({
       child.innerText = String(Date.now() + 1)
       parent.appendChild(child)
     }
-  },
+  }
 })
