@@ -3,8 +3,11 @@ import vue from '@vitejs/plugin-vue';
 
 // See https://wxt.dev/api/config.html
 export default defineConfig({
-  outDir: 'dist',
-  // srcDir: 'src',
+  // folders
+  outDir: './dist',
+  srcDir: './src',
+
+  // build
   imports: {
     addons: {
       vueTemplate: true,
